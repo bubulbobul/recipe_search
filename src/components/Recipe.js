@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-const API_KEY = "8fd715836ce66fb44473ee47c22db392";
+const API_KEY = "GET_YOUR_API_KEY";
 const URL = `https://www.food2fork.com/api/search?key=${API_KEY}`;
 
 export default class Recipe extends Component {
