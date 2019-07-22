@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 
 import Form from "./components/Form";
+import Recipes from "./components/Recipes";
 
 const API_KEY = "8fd715836ce66fb44473ee47c22db392";
 const URL = `https://www.food2fork.com/api/search?key=${API_KEY}`;
@@ -30,9 +31,7 @@ class App extends Component {
           <h1 className='App-title'>Recipe Search</h1>
         </header>
         <Form getRecipe={this.getRecipe} />
-        {this.state.recipes.map((recipe, id) => {
-          return <p key={id}>{recipe.title}</p>;
-        })}
+        <Recipes recipes={this.state.recipes} />
       </div>
     );
   }
