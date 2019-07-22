@@ -12,6 +12,7 @@ class App extends Component {
     recipes: []
   };
 
+  //First
   getRecipe = async e => {
     e.preventDefault();
     const recipeName = e.target.elements.recipeName.value;
@@ -22,6 +23,21 @@ class App extends Component {
     this.setState({
       recipes: data.recipes
     });
+  };
+
+  //Third
+  componentDidMount = () => {
+    const json = localStorage.getItem("recipes");
+    const recipes = JSON.parse(json);
+    this.setState({
+      recipes
+    });
+  };
+
+  //Second
+  componentDidUpdate = () => {
+    const recipes = JSON.stringify(this.state.recipes);
+    localStorage.setItem("recipes", recipes);
   };
 
   render() {
