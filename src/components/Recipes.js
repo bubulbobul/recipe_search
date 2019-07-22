@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Recipes(props) {
   return (
@@ -9,7 +10,7 @@ function Recipes(props) {
             <div
               className='col-md-4'
               key={recipe.recipe_id}
-              style={{ marginBotton: "2rem" }}
+              style={{ marginBottom: "2rem" }}
             >
               <div className='recipes__box'>
                 <img
@@ -27,7 +28,18 @@ function Recipes(props) {
                     Publisher: <span>{recipe.publisher}</span>
                   </p>
                 </div>
-                <button className='recipe_buttons'>View Recipe</button>
+                <button className='recipe_buttons'>
+                  {/* <Link to={`/recipe/${recipe.recipe_id}`}>View Recipe</Link> */}
+                  <Link
+                    to={{
+                      pathname: `/recipe/${recipe.recipe_id}`,
+                      state: { recipe: recipe.title }
+                    }}
+                  >
+                    {" "}
+                    View Recipe
+                  </Link>
+                </button>
               </div>
             </div>
           );
