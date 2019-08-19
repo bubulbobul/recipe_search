@@ -4,8 +4,8 @@ import "./App.css";
 import Form from "./components/Form";
 import Recipes from "./components/Recipes";
 
-const API_KEY = "8fd715836ce66fb44473ee47c22db392";
-// const API_KEY = "G8fd715836ce66fb44473ee47c22db392";
+const API_KEY =
+  "GET_YOUR_API_KEY on the following website https://www.food2fork.com";
 // const URL = `https://www.food2fork.com/api/search?key=${API_KEY}`;
 const URL = `https://www.food2fork.com/api/search?key=${API_KEY}`;
 
