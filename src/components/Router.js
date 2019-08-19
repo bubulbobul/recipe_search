@@ -5,14 +5,12 @@ import App from "../App.js";
 import Recipe from "./Recipe";
 
 const Router = () => {
+  console.log(process.env.PUBLIC_URL);
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <Switch>
-        <Route exact path={`${process.env.PUBLIC_URL}/`} component={App} />
-        <Route
-          path={`${process.env.PUBLIC_URL}/recipe/:id`}
-          component={Recipe}
-        />
+        <Route exact path={`/`} component={App} />
+        <Route path={`/recipe/:id`} component={Recipe} />
       </Switch>
     </BrowserRouter>
   );

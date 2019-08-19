@@ -43,7 +43,7 @@ export default class Recipe extends Component {
               </span>
             </p>
             <button className='active-recipe__button'>
-              <Link to={`${process.env.PUBLIC_URL}/`}>Go Home</Link>
+              <Link to={`/`}>Go Home</Link>
             </button>
           </div>
         )}
