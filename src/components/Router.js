@@ -11,8 +11,11 @@ const Router = () => {
   return (
     <HashRouter basename='/'>
       <Switch>
-        <Route exact path={`/`} component={App} />
-        <Route path={`/recipe/:id`} component={Recipe} />
+        <Route exact path={`${process.env.PUBLIC_URL}/`} component={App} />
+        <Route
+          path={`${process.env.PUBLIC_URL}/recipe/:id`}
+          component={Recipe}
+        />
       </Switch>
     </HashRouter>
   );
