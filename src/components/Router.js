@@ -6,7 +6,7 @@ import Recipe from "./Recipe";
 
 const Router = () => {
   console.log(process.env.PUBLIC_URL);
-  console.log(`${process.env.PUBLIC_URL}/`);
+  console.log("yoo", `${process.env.PUBLIC_URL}/`);
   console.log(`${process.env.PUBLIC_URL}/recipe/:id`);
   return (
     <HashRouter basename='/'>
