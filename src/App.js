@@ -5,7 +5,7 @@ import Form from "./components/Form";
 import Recipes from "./components/Recipes";
 
 const API_KEY = "GET_YOUR_API_KEY";
-const URL = `https://www.food2fork.com/api/search?key=${API_KEY}`;
+const URL = `http://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=${API_KEY}`;
 
 class App extends Component {
   state = {
@@ -18,6 +18,7 @@ class App extends Component {
     const recipeName = e.target.elements.recipeName.value;
     // console.log("Working from getRecipe", recipeName);
     const api_call = await fetch(`${URL}&q=${recipeName}&count=100`);
+    // http://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=${API_KEY}
     const data = await api_call.json();
     // console.log(data.recipes);
     this.setState({
