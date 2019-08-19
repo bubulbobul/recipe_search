@@ -21,8 +21,8 @@ class App extends Component {
     // console.log("Working from getRecipe", recipeName);
     const api_call = await fetch(`${URL}&q=${recipeName}&count=100`);
     const data = await api_call.json();
-    console.log("data.recipes");
-    console.log(data.recipes);
+    // console.log("data.recipes");
+    // console.log(data.recipes);
     this.setState({
       recipes: data.recipes
     });

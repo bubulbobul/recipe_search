@@ -13,14 +13,14 @@ export default class Recipe extends Component {
     const title = this.props.location.state.recipe;
     const req = await fetch(`${URL}&q=${title}`);
     const res = await req.json();
-    console.log(res.recipes[0]);
+    // console.log(res.recipes[0]);
     this.setState({
       activeRecipe: res.recipes[0]
     });
   };
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     const recipe = this.state.activeRecipe;
     // // console.log(this.props)
     return (

@@ -2,14 +2,16 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 function Recipes(props) {
-  console.log("Redcipes props");
-  console.log("Redcipes props", props);
+  // console.log("Redcipes props");
+  // console.log("Redcipes props", props);
   return (
     <div className='container'>
       <div className='row'>
         {props.recipes === null ? (
           <div>
-            <h3>Loading...</h3>
+            <h3>
+              Search for any recipe such as chicken, sandwich, shrimp, pizza etc
+            </h3>
             {console.log("loading")}
           </div>
         ) : (
