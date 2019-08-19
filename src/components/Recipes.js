@@ -32,9 +32,7 @@ function Recipes(props) {
                   {/* <Link to={`/recipe/${recipe.recipe_id}`}>View Recipe</Link> */}
                   <Link
                     to={{
-                      pathname: `${process.env.PUBLIC_URL}/recipe/${
-                        recipe.recipe_id
-                      }`,
+                      pathname: `/recipe/${recipe.recipe_id}`,
                       state: { recipe: recipe.title }
                     }}
                   >
