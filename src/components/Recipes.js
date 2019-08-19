@@ -8,11 +8,10 @@ function Recipes(props) {
     <div className='container'>
       <div className='row'>
         {props.recipes === null ? (
-          <div>
+          <div style={{ textAlign: "center" }}>
             <h3>
               Search for any recipe such as chicken, sandwich, shrimp, pizza etc
             </h3>
-            {console.log("loading")}
           </div>
         ) : (
           <Fragment>

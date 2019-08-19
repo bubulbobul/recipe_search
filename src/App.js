@@ -48,6 +48,7 @@ class App extends Component {
       <div className='App'>
         <header className='App-header'>
           <h1 className='App-title'>Recipe Search</h1>
+          <p>Find your favorite recipe</p>
         </header>
         <Form getRecipe={this.getRecipe} />
         <Recipes recipes={this.state.recipes} />

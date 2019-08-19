@@ -10,7 +10,8 @@ export default class Recipe extends Component {
   };
 
   componentDidMount = async () => {
-    const title = this.props.location.state.recipe;
+    console.log(this.props);
+    const title = this.props.routerProps.location.state.recipe;
     const req = await fetch(`${URL}&q=${title}`);
     const res = await req.json();
     // console.log(res.recipes[0]);
@@ -20,7 +21,7 @@ export default class Recipe extends Component {
   };
 
   render() {
-    // console.log(this.props);
+    // console.log(this.props.routerProps);
     const recipe = this.state.activeRecipe;
     // // console.log(this.props)
     return (
